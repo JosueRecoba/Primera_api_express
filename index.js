@@ -18,7 +18,9 @@ const options = {
     }
   },
 }
-app.use(cors()); //cualquier origen
+app.use(cors());
+require('./utils/auth');
+ //cualquier origen
 app.get('/api', (req, res) => {
   res.send(`
     <style>
